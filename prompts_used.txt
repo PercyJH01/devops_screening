@@ -1,0 +1,13 @@
+Current State:
+
+Cosmos DB (likely in provisioned RU or autoscale mode) holds 2M+ billing records.
+
+Each record = ~300 KB, so total data size = hundreds of GB.
+
+Read-heavy, but older than 3 months → rarely accessed.
+
+High storage + RU costs because Cosmos DB storage + RUs scale with size.
+
+Goal: Reduce costs without breaking API contracts, losing data, or introducing downtime.
+
+Provide an architecture diagram along with scripts
